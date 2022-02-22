@@ -1,41 +1,78 @@
 
-<header class="header">
-    <nav class="navbar navbar-expand-lg navbar-light bg-ligth fixed-top miNavBar">
-      <a class="navbar-brnd" href="/"><img src="/asset/logo/logo5.png" alt=""></a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span uk-navbar-toggle-icon></span>
-      </button>
-      <div class="collapse navbar-collapse " id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto ">
-          <li class="nav-item  active">
-            <a  class="nav-link  " href="/">Inicio <span class="sr-only"></span></a>
-          </li>
-          <li  class="nav-item  ">
-            <a class="nav-link" href="/nosotros">Nosotros </a>
-          </li>
-          <li class="nav-item ">
-            <a class="nav-link" href="/productos">Productos</a>          
-          </li>
-          <li class="nav-item ">
-            <a class="nav-link" href="/contacto">Contacto</a>
-          </li>        
-          <li class="nav-item ">
-            <a class="nav-link" href="/administrar">Administrar</a>
-          </li>
-        </ul>      
-            <div class="col-2-sm">
-              <a href="https://www.instagram.com/"><img class="icon-ins"  src="/asset/logo/instagram.png" alt=""></a>
-              <a href="https://www.facebook.com/"><img class="icon-face"  src="/asset/logo/facebook.png" alt=""></a>
-                  
-             </div>   
-      </div>
-      
-      
-      
-      
-      
-    </nav>  
+<header class="header ">
+  <nav class="navbar navbar-expand-lg navbar-light bg-ligth fixed-top miNavBar">
+    <div class="logo">
+      <a class="navbar-brnd" href="/"><img src="/asset/logo/logo_large.png" alt="Emly´s" width="140px"></a>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span uk-navbar-toggle-icon></span>
+    </button>
     
+    <div class="collapse navbar-collapse " id="navbarSupportedContent">
+      <div class="nav-botones">
+      <ul class="navbar-nav mr-auto ">
+        <li class="nav-item  active">
+          <a  class="nav-link  " href="/">Inicio <span class="sr-only"></span></a>
+        </li>
+        <li  class="nav-item  ">
+          <a class="nav-link" href="/nosotros">Nosotros <span uk-icon="heart"></span></a>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link" href="/productos">Productos</a>          
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link" href="/contacto">Contacto</a>
+        </li>        
+        <li class="nav-item ">
+          <a class="nav-link" href="/administrar">Administrar</a>
+        </li>
+      </ul> 
+    
+    </div>
+     
+      <!-- Iconos red -->
+         <div class="bottom-red">
+          <div class="col-2-sm">
+            <a href="" class="uk-icon-button uk-margin-small-right" uk-icon="twitter"></a>
+            <a href="" class="uk-icon-button  uk-margin-small-right" uk-icon="facebook"></a>
+            <a href="" class="uk-icon-button" uk-icon="youtube"></a>             
+           </div> 
+         </div>
+           
+      <!-- icino bara busqueda -->
+          <div class="icon-search">
+            <ion-icon name="search-circle-outline"></ion-icon>     
+     
+          </div>
+           <ul class="opciones">
+             <% if(locals.usuario) { %>   
+              <li class="nav-item">
+                <a class="nav-link" href="#"><i class="fas fa-cart-plus"></i></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/logout">Cerrar sesión<i class="fas fa-sign-out-alt"></i></a>
+              </li>
+              <li class="nav-item">
+                  <div class="avatar">
+                    <img  src="/images/usuarios/<%=locals.usuario.avatar %>"   style= 'border-radius: 100%;'alt="">
+                  </div>
+              </li>
+            <% } else { %>  
+      
+              <!--Cuando no estoy logueado debería ver esto-->
+              <li class="nav-item">
+                <a href="/login"><i class="fas fa-sign-in-alt"></i></a>
+              </li>
+              <li class="nav-item">
+                <a href="/registro"><i class="fas fa-user-plus"></i></a>
+              </li>
+            <%}%>  
+          </ul>
+        </div>
+    </div>      
+  </nav>  
+  
+  
     
     
      

@@ -1,3 +1,59 @@
-.h1{
-    color:red
+.container-fluid{
+    background-color: aqua;
+    position: absolute;
+    display: flex;
+    
+}
+/*boy-header */
+.header{
+    background-color: blue;
+}
+ .logo{
+     margin-left: 10px;
+ }
+
+ .nav-botones{
+     flex-wrap: wrap;
+     margin-left: 40px;
+     padding-left: 30px;
+ }
+ .bottom-red{
+     margin-left: 30px;
+     align-items: flex-end;
+ }
+ .icon-search{
+     width: 30px;
+     margin-left: 30px;
+ }
+ .opciones{
+     margin-left: 30px;
+ }
+ .icon-user{
+     margin-left: 40px;
+ }
+.fondo{
+    width: 100%;
+    margin-top: 120px;
+}
+
+
+/* Body-Section */
+.body-section{
+    box-sizing: border-box;
+    background-color: brown;
+    width: 100%;
+    
+    margin-top: 80px;
+}
+.img-portada{
+    background-color: black;
+}
+.body-section2{
+    background-color: azure;
+}
+.art1{
+    background-color: aqua;
+}
+.art2{
+    background-color: blanchedalmond;
 }

@@ -19,12 +19,12 @@ const webRoutes = require('./routes/web');
 app.use(webRoutes);
 
 
-
+//
 
 
 
 // configuro el puerto por si el servidor ya me asigna uno//
-app.set('port', process.env.PORT || 3000);
+app.set('port', process.env.PORT || 3030);
 
 // Aca levanto el servidor 
 app.listen(app.get('port'), ()=> console.log('Servidor funcionando en el puerto',app.get('port')));
