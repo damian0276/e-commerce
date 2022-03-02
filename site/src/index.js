@@ -11,12 +11,13 @@ app.set('view engine','ejs');
 
 //Uso  a las rutas
 const webRoutes = require('./routes/web');
-                                                                                                       
+const adminRoutes = require('./routes/admin')                                                                                                        
 
 
 
 //llamo a las rutas
 app.use(webRoutes);
+app.use(adminRoutes);
 
 
 //
